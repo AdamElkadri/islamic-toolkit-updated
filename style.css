@@ -1,7 +1,6 @@
 /* General Styling */
 body {
-    background: linear-gradient(to bottom, #D4A017, #E0B322, #1E6A44, #155724);
-    background-attachment: fixed;
+    background: linear-gradient(to bottom, #1E5631, #D4A017);    background-attachment: fixed;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -72,7 +71,8 @@ body {
 /* Tasbeeh Counter Styling */
 .container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 300px;
+    font-size: 20px;
 }
 
 #counter-display {
@@ -153,12 +153,11 @@ button:hover {
     background-color: #4A148C;
     transition: width 0.3s ease-in-out;
     border-radius: 10px;
-    
+    gap: 20px;
 }
 /* Fix Navbar Alignment */
 .navbar {
-    background-color: #D4A017; /* Gold background */
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -177,7 +176,7 @@ button:hover {
 
 .navbar a {
     text-decoration: none;
-    color: #330066; /* Dark purple for contrast */
+    color: white; /* Dark purple for contrast */
     font-weight: bold;
     font-size: 18px;
     padding: 10px 15px;
@@ -193,5 +192,215 @@ button:hover {
     color: black;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* Add space between progress bar and buttons */
+.progress-container {
+    margin-bottom: 30px;
+}
+
+/* Add space between Tasbeeh buttons */
+.tasbeeh-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Increase space between buttons */
+    margin-bottom: 20px; /* Increase space below buttons */
+}
+
+/* Add space between Reset & Save buttons */
+.tasbeeh-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between Reset & Save */
+    margin-top: 20px; /* Increase space above Reset & Save */
+}
+
+/* Floating Names Container */
+#floating-names-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/* Floating Name Buttons - More Visible */
+.floating-name {
+    position: absolute;
+    background-color: #6A1B9A; /* Richer purple */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    white-space: nowrap;
+    animation: floatUp linear infinite;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effect to Make Buttons Pop */
+.floating-name:hover {
+    transform: scale(1.1);
+    background-color: #4A148C; /* Darker purple */
+}
+
+/* Animation for Floating Effect */
+@keyframes floatUp {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+/* 📌 Improved Search Bar */
+#search {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #6A1B9A;
+    border-radius: 25px;
+    outline: none;
+    background: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+/* 📌 Search Bar Focus Effect */
+#search:focus {
+    background: white;
+    border-color: #4A148C;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 📌 Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+/* 📌 Modal Content Box */
+.modal-content {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+}
+
+/* 📌 Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* 📌 Enlarged Name Styling */
+#modal-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4A148C;
+}
+
+/* 📌 Arabic Name Styling */
+#modal-arabic {
+    font-size: 40px;
+    color: #1E6A44; /* Green for Islamic touch */
+    font-weight: bold;
+    font-family: 'Amiri', serif; /* Traditional Arabic font */
+}
+
+/* 📌 Meaning Styling */
+#modal-meaning {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+    font-style: italic;
+}
+
+/* 📌 Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.tasbeeh-container {
+    margin-top: 100px;
+}
+
+.tasbeeh-hadith {
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.share-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.share-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.share-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Platform-Specific Colors */
+.whatsapp-btn { background: #25D366; }
+.email-btn { background: #D44638; }
+.instagram-btn { background: #C13584; }
+.twitter-btn { background: black; }
+
+#search-bar {
+    width: 60%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid #4A148C;
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(74, 20, 140, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#search-bar:focus {
+    box-shadow: 0px 5px 20px rgba(74, 20, 140, 0.6);
 }
 

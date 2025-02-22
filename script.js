@@ -2,32 +2,48 @@ document.addEventListener("DOMContentLoaded", function () {
     const hadithText = document.getElementById("hadith-text");
     const hadithSource = document.getElementById("hadith-source");
     const getHadithBtn = document.getElementById("get-hadith");
-    const shareHadithBtn = document.getElementById("share-hadith");
 
-    let hadiths = [];
-    fetch("hadiths.json")
-        .then(response => response.json())
-        .then(data => {
-            hadiths = data;
-        })
-        .catch(error => console.error("Error loading Hadiths:", error));
+    function loadNewHadith() {
+        fetch("data/hadiths.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Hadith file not found.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                let randomHadith = data[Math.floor(Math.random() * data.length)];
+                let fullHadith = `"${randomHadith.hadith}"`;
+                let bookSource = `(${randomHadith.book})`;
 
-    function getRandomHadith() {
-        if (hadiths.length > 0) {
-            let randomIndex = Math.floor(Math.random() * hadiths.length);
-            hadithText.innerText = hadiths[randomIndex].hadith;
-            hadithSource.innerText = `(${hadiths[randomIndex].book})`;
-        } else {
-            hadithText.innerText = "Hadiths are still loading, please try again...";
-        }
+                // Display new Hadith
+                hadithText.innerHTML = fullHadith;
+                hadithSource.innerHTML = `<strong>${bookSource}</strong>`;
+
+                // Update Share Links
+                updateShareLinks(fullHadith, bookSource);
+            })
+            .catch(error => {
+                hadithText.innerText = "⚠️ Error loading hadith.";
+                console.error(error);
+            });
     }
 
-    getHadithBtn.addEventListener("click", getRandomHadith);
+    function updateShareLinks(hadith, source) {
+        let shareMessage = `${hadith} - ${source}`;
 
-    shareHadithBtn.addEventListener("click", function () {
-        let message = hadithText.innerText + " " + hadithSource.innerText;
-        let whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
-        window.open(whatsappURL, "_blank");
+        document.getElementById("whatsapp-share").href = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage)}`;
+        document.getElementById("email-share").href = `mailto:?subject=Beautiful Hadith&body=${encodeURIComponent(shareMessage)}`;
+        document.getElementById("instagram-share").href = "https://www.instagram.com"; // Instagram does not allow direct text sharing
+        document.getElementById("twitter-share").href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareMessage)}`;
+    }
+
+    // Load first Hadith when page loads
+    loadNewHadith();
+
+    // Add event listener for "Get a Random Hadith" button
+    getHadithBtn.addEventListener("click", function () {
+        loadNewHadith();
     });
 });
 
@@ -87,3 +103,40 @@ document.addEventListener("DOMContentLoaded", function () {
         updateProgress();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const namesContainer = document.getElementById("floating-names-container");
+
+    fetch("data/names.json")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(nameObj => {
+                let button = document.createElement("button");
+                button.classList.add("floating-name");
+                button.innerHTML = `<strong>${nameObj.name}</strong><br>${nameObj.meaning}`;
+                button.style.left = Math.random() * 90 + "vw";
+                button.style.animationDuration = (Math.random() * 5 + 5) + "s";
+
+                namesContainer.appendChild(button);
+            });
+        })
+        .catch(error => {
+            console.error("Error loading names:", error);
+            namesContainer.innerHTML = "<p style='color:red;'>⚠️ Failed to load names. Check JSON file.</p>";
+        });
+});
+
+function filterNames() {
+    let input = document.getElementById("search-bar").value.toLowerCase();
+    let nameButtons = document.querySelectorAll(".floating-name");
+
+    nameButtons.forEach(button => {
+        let nameText = button.innerText.toLowerCase();  // Get button text
+        if (nameText.includes(input)) {
+            button.style.display = "block";  // Show if match found
+        } else {
+            button.style.display = "none";   // Hide if not matching
+        }
+    });
+}
+
