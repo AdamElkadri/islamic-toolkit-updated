@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tasbeeh Counter</title>
+    <link rel="stylesheet" href="style.css">  <!-- Make sure this is properly linked -->
+    <script defer src="script.js"></script>  <!-- JavaScript file for functionality -->
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="names.html">99 Names of Allah</a></li>
+            <li><a href="reminders.html">Islamic Reminders</a></li>
+            <li><a href="tasbeeh.html">Tasbeeh Counter</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>🕌 Digital Tasbeeh Counter</h1>
+
+        <!-- Display Counter -->
+        <div id="counter-display">0</div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+            <p id="progress-text">0%</p>
+        </div>
+
+        <!-- Tasbeeh Buttons -->
+        <div class="tasbeeh-buttons">
+            <button class="dhikr-btn" data-dhikr="SubhanAllah">SubhanAllah</button>
+            <button class="dhikr-btn" data-dhikr="Alhamdulillah">Alhamdulillah</button>
+            <button class="dhikr-btn" data-dhikr="Allahu Akbar">Allahu Akbar</button>
+            <button class="dhikr-btn" data-dhikr="Astaghfirullah">Astaghfirullah</button>
+        </div>
+
+        <!-- Reset & Save Buttons -->
+        <div class="tasbeeh-actions">
+            <button id="reset-btn">🔄 Reset</button>
+            <button id="save-btn">💾 Save</button>
+        </div>
+    </div>
+
+</body>
+</html>

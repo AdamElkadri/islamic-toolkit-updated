@@ -1,154 +1,197 @@
-/* General Styles */
+/* General Styling */
 body {
+    background: linear-gradient(to bottom, #D4A017, #E0B322, #1E6A44, #155724);
+    background-attachment: fixed;
+    color: white;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: radial-gradient(circle, #f3f3f3, #e0e0e0);
     text-align: center;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
 }
 
-/* Navbar Styling */
-.navbar {
-    background-color: #4A148C;
-    padding: 10px;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Floating Names Container */
-#floating-names-container {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    border-radius: 50px;
-}
-
-/* Floating Name Button */
-.floating-name {
-    position: absolute;
-    font-size: 18px;
+/* Counter Display */
+#counter-display {
+    font-size: 50px;
     font-weight: bold;
-    color: white;
-    background-color: #4A148C;
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    animation: floatAnimation 10s ease-in-out infinite, fadeAnimation 10s ease-in-out infinite;
-    transition: transform 0.3s;
+    margin: 20px 0;
+    color: #fff;
 }
 
-.floating-name:hover {
-    transform: scale(1.1);
+/* Tasbeeh Buttons */
+.tasbeeh-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dhikr-btn {
+    background-color: #4A148C;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dhikr-btn:hover {
     background-color: #880E4F;
 }
 
-@keyframes floatAnimation {
-    from {
-        transform: translateY(100vh);
-    }
-    to {
-        transform: translateY();
-    }
+/* Progress Bar */
+.progress-container {
+    width: 80%;
+    max-width: 400px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
 }
 
-@keyframes fadeAnimation {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #4A148C;
+    transition: width 0.3s ease-in-out;
+    border-radius: 10px;
+    position: relative;
 }
 
-/* Reminder Section */
-#hadith-display {
-    background: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+#progress-text {
+    position: absolute;
+    width: 100%;
     text-align: center;
-}
-
-#hadith-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-#hadith-source {
     font-size: 14px;
-    color: #777;
+    font-weight: bold;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Buttons */
+/* Tasbeeh Counter Styling */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#counter-display {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4A148C;
+    margin: 20px 0;
+}
+
+/* Dhikr Buttons */
+.tasbeeh-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dhikr-btn {
+    background-color: #4A148C;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dhikr-btn:hover {
+    background-color: #880E4F;
+}
+
+/* Reset & Save Buttons */
+.tasbeeh-actions {
+    margin-top: 10px;
+}
+
 button {
     background-color: #4A148C;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 10px;
     cursor: pointer;
+    margin: 5px;
     transition: background 0.3s;
-    margin-top: 10px;
 }
 
 button:hover {
     background-color: #880E4F;
 }
 
-/* Search Bar */
-#search {
+/* Target Input */
+#target-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Progress Bar */
+.progress-container {
     width: 80%;
     max-width: 400px;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 25px;
-    border: 2px solid #ddd;
-    outline: none;
-    transition: 0.3s ease-in-out;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #4A148C;
+    transition: width 0.3s ease-in-out;
+    border-radius: 10px;
+    
+}
+/* Fix Navbar Alignment */
+.navbar {
+    background-color: #D4A017; /* Gold background */
+    padding: 15px;
     text-align: center;
-    transition: 0.5s;
 }
 
-/* Hover Effect */
-#search:hover {
-    border-color: #4A148C;
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Ensure horizontal layout */
+    justify-content: center;  /* Center the items */
+    gap: 20px;  /* Add spacing between links */
 }
 
-/* Focus Effect */
-#search:focus {
-    border-color: #880E4F;
-    box-shadow: 2px 2px 15px rgba(138, 43, 226, 0.3);
+.navbar li {
+    display: inline;
 }
 
-/* Centering */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.navbar a {
+    text-decoration: none;
+    color: #330066; /* Dark purple for contrast */
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s;
 }
 
+.navbar a:hover {
+    color: #ffffff; /* White on hover */
+}
 
+/* Make Hadith Text Black */
+#hadith-text, #hadith-source {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
 
