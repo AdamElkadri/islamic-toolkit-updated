@@ -1,5 +1,21 @@
 [
     {"name": "Ar-Rahman", "arabic": "الرَّحْمَنُ", "meaning":"The Most Gracious", "audio": "assets/audio/ar-rahman.mp3"},
     {"name": "Ar-Rahim", "arabic": "الرَّحِيمُ" , "meaning": "The Most Merciful", "audio": "assets/audio/ar-rahim.mp3"},
-    {"name": "Al-Malik", "arabic": "الْمَلِكُ" , "meaning": "The King", "audio": "assets/audio/ar-rahim.mp3"}
+    {"name": "Al-Malik", "arabic": "الْمَلِكُ" , "meaning": "The King", "audio": "assets/audio/al-malik.mp3"},
+    {"name": "Al-Quddus", "arabic": "ٱلْقُدُّوسُ", "meaning": "The Most Pure", "audio": "assets/audio/al-quddus.mp3"},
+    {"name": "As-Salam", "arabic": "ٱلسَّلَامُ", "meaning": "The Source of Peace", "audio": "assets/audio/as-salam.mp3"},
+    {"name": "Al-Mu’min", "arabic": "ٱلْمُؤْمِنُ", "meaning": "The Guardian of Faith", "audio": "assets/audio/al-mumin.mp3"},
+    {"name": "Al-Muhaymin", "arabic": "ٱلْمُهَيْمِنُ", "meaning": "The Preserver", "audio": "assets/audio/al-muhaymin.mp3"},
+    {"name": "Al-Aziz", "arabic": "ٱلْعَزِيزُ", "meaning": "The Almighty", "audio": "assets/audio/al-aziz.mp3"},
+    {"name": "Al-Jabbar", "arabic": "ٱلْجَبَّارُ", "meaning": "The Compeller", "audio": "assets/audio/al-jabbar.mp3"},
+    {"name": "Al-Mutakabbir", "arabic": "ٱلْمُتَكَبِّرُ", "meaning": "The Supreme", "audio": "assets/audio/al-mutakabbir.mp3"},
+    {"name": "Al-Khaliq", "arabic": "ٱلْخَالِقُ", "meaning": "The Creator", "audio": "assets/audio/al-khaliq.mp3"},
+    {"name": "Al-Bari", "arabic": "ٱلْبَارِئُ", "meaning": "The Evolver", "audio": "assets/audio/al-bari.mp3"},
+    {"name": "Al-Musawwir", "arabic": "ٱلْمُصَوِّرُ", "meaning": "The Fashioner", "audio": "assets/audio/al-musawwir.mp3"},
+    {"name": "Al-Ghaffar", "arabic": "ٱلْغَفَّارُ", "meaning": "The Constant Forgiver", "audio": "assets/audio/al-ghaffar.mp3"},
+    {"name": "Al-Qahhar", "arabic": "ٱلْقَهَّارُ", "meaning": "The All-Prevailing One", "audio": "assets/audio/al-qahhar.mp3"},
+    {"name": "Al-Wahhab", "arabic": "ٱلْوَهَّابُ", "meaning": "The Supreme Bestower", "audio": "assets/audio/al-wahhab.mp3"},
+    {"name": "Ar-Razzaq", "arabic": "ٱلرَّزَّاقُ", "meaning": "The Provider", "audio": "assets/audio/ar-razzaq.mp3"},
+    {"name": "Al-Fattah", "arabic": "ٱلْفَتَّاحُ", "meaning": "The Supreme Solver", "audio": "assets/audio/al-fattah.mp3"},
+    {"name": "Al-Alim", "arabic": "ٱلْعَلِيمُ", "meaning": "The All-Knowing", "audio": "assets/audio/al-alim.mp3"}
 ]
