@@ -1,0 +1,5 @@
+[
+    {"name": "Ar-Rahman", "arabic": "الرَّحْمَنُ", "meaning":"The Most Gracious", "audio": "assets/audio/ar-rahman.mp3"},
+    {"name": "Ar-Rahim", "arabic": "الرَّحِيمُ" , "meaning": "The Most Merciful", "audio": "assets/audio/ar-rahim.mp3"},
+    {"name": "Al-Malik", "arabic": "الْمَلِكُ" , "meaning": "The King", "audio": "assets/audio/ar-rahim.mp3"}
+]
