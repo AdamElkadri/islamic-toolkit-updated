@@ -106,6 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const namesContainer = document.getElementById("floating-names-container");
+    const modal = document.getElementById("name-modal");
+    const modalName = document.getElementById("modal-name");
+    const modalArabic = document.getElementById("modal-arabic");
+    const modalMeaning = document.getElementById("modal-meaning");
+    const closeModal = document.querySelector(".close-btn");
 
     fetch("data/names.json")
         .then(response => response.json())
@@ -114,8 +119,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 let button = document.createElement("button");
                 button.classList.add("floating-name");
                 button.innerHTML = `<strong>${nameObj.name}</strong><br>${nameObj.meaning}`;
-                button.style.left = Math.random() * 90 + "vw";
-                button.style.animationDuration = (Math.random() * 5 + 5) + "s";
+                
+                button.style.left = Math.random() * 90 + "vw";  
+                button.style.animationDuration = (Math.random() * 3 + 3) + "s";  
+                
+                // 📌 Add click event to open modal
+                button.addEventListener("click", function () {
+                    modal.style.display = "flex";
+                    modalName.innerText = nameObj.name;
+                    modalArabic.innerText = nameObj.arabic;
+                    modalMeaning.innerText = nameObj.meaning;
+                });
 
                 namesContainer.appendChild(button);
             });
@@ -124,7 +138,20 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error loading names:", error);
             namesContainer.innerHTML = "<p style='color:red;'>⚠️ Failed to load names. Check JSON file.</p>";
         });
+
+    // 📌 Close Modal when clicking the "×" button
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // 📌 Close Modal when clicking outside
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 });
+
 
 function filterNames() {
     let input = document.getElementById("search-bar").value.toLowerCase();
