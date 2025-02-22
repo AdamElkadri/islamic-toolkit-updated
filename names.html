@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>99 Names of Allah</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
@@ -19,10 +20,9 @@
 
     <div class="container">
         <h1>99 Names of Allah</h1>
-        <input type="text" id="search" placeholder="Search a Name">
-        <ul id="names-list"></ul>
+        <input type="text" id="search" placeholder="Search for a Name..." onkeyup="filterNames()">
+        <div id="floating-names-container"></div>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
