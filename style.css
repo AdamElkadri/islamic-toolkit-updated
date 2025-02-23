@@ -1,6 +1,7 @@
 /* General Styling */
 body {
-    background: linear-gradient(to bottom, #1E5631, #D4A017);    background-attachment: fixed;
+    background: url(https://img.freepik.com/free-vector/realistic-paper-style-abstract-ornamental-background_79603-2433.jpg);
+    background-attachment: fixed;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -11,7 +12,7 @@ body {
     font-size: 50px;
     font-weight: bold;
     margin: 20px 0;
-    color: #fff;
+    color: white;
 }
 
 /* Tasbeeh Buttons */
@@ -20,6 +21,7 @@ body {
     justify-content: center;
     gap: 10px;
     margin-bottom: 10px;
+
 }
 
 .dhikr-btn {
@@ -51,9 +53,10 @@ body {
 #progress-bar {
     height: 100%;
     width: 0%;
-    background-color: #4A148C;
+    background-color: black;
     transition: width 0.3s ease-in-out;
     border-radius: 10px;
+    margin-bottom: 100px;
     position: relative;
 }
 
@@ -78,7 +81,7 @@ body {
 #counter-display {
     font-size: 50px;
     font-weight: bold;
-    color: #4A148C;
+    color: white;
     margin: 20px 0;
 }
 
@@ -91,7 +94,7 @@ body {
 }
 
 .dhikr-btn {
-    background-color: #4A148C;
+    background-color: black;
     color: white;
     border: none;
     padding: 15px 20px;
@@ -111,7 +114,7 @@ body {
 }
 
 button {
-    background-color: #4A148C;
+    background-color: black;
     color: white;
     border: none;
     padding: 15px 20px;
@@ -143,6 +146,7 @@ button:hover {
     height: 15px;
     background-color: #ccc;
     border-radius: 10px;
+    margin-bottom: 100px;
     margin: 20px auto;
     overflow: hidden;
 }
@@ -150,7 +154,7 @@ button:hover {
 #progress-bar {
     height: 100%;
     width: 0%;
-    background-color: #4A148C;
+    background-color: white;
     transition: width 0.3s ease-in-out;
     border-radius: 10px;
     gap: 20px;
@@ -189,9 +193,11 @@ button:hover {
 
 /* Make Hadith Text Black */
 #hadith-text, #hadith-source {
-    color: black;
+    color: white;
     font-size: 18px;
     font-weight: bold;
+    margin-bottom:40px;
+    margin-top: 30px;
 }
 
 /* Add space between progress bar and buttons */
@@ -204,7 +210,8 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 15px; /* Increase space between buttons */
-    margin-bottom: 20px; /* Increase space below buttons */
+    margin-top: 60px;
+    
 }
 
 /* Add space between Reset & Save buttons */
@@ -226,8 +233,8 @@ button:hover {
 /* Floating Name Buttons - More Visible */
 .floating-name {
     position: absolute;
-    background-color: #6A1B9A; /* Richer purple */
-    color: white;
+    background-color: #ffffff; /* Richer purple */
+    color: black;
     font-size: 18px;
     font-weight: bold;
     padding: 12px 20px;
@@ -237,7 +244,7 @@ button:hover {
     cursor: pointer;
     white-space: nowrap;
     animation: floatUp linear infinite;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.7s ease, background 0.7s ease;
 }
 
 /* Hover Effect to Make Buttons Pop */
@@ -249,7 +256,7 @@ button:hover {
 /* Animation for Floating Effect */
 @keyframes floatUp {
     from {
-        transform: translateY(100vh);
+        transform: translateY(50vh);
         opacity: 1;
     }
     to {
@@ -347,10 +354,11 @@ button:hover {
 
 .tasbeeh-container {
     margin-top: 100px;
+    
 }
 
 .tasbeeh-hadith {
-    margin-top: 100px;
+    margin-top: 70px;
     font-size: 20px;
 }
 
