@@ -404,3 +404,7 @@ button:hover {
     box-shadow: 0px 5px 20px rgba(74, 20, 140, 0.6);
 }
 
+.text {
+    font-size: 20px;
+}
+
